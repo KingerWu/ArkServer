@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/KingerWu/ArkServer/issues"
   },
-  "homepage": "https://github.com/KingerWu/ArkServer#readme"
+  "homepage": "https://github.com/KingerWu/ArkServer#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  }
 }
