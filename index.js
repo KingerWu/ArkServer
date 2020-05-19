@@ -1,10 +1,12 @@
 var express = require('express');
 var app = express();
 
-// rest api
+// 路由测试
 app.use('/rest', require('./router/rest'));
 app.use('/path', require('./router/path'));
 
+// 中间件测试
+app.use('/middle', require('./router/middleware'));
 
 app.get('/error', function (req, res) {
     throw new Error("test error.");
