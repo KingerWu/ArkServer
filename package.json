@@ -18,6 +18,8 @@
   "homepage": "https://github.com/KingerWu/ArkServer#readme",
   "dependencies": {
     "express": "4.17.1",
-    "mongoose": "5.9.15"
+    "mongoose": "5.9.15",
+    "mysql2": "2.1.0",
+    "sequelize": "5.21.10"
   }
 }

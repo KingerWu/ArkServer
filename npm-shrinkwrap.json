@@ -4,6 +4,11 @@
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
+    "@types/node": {
+      "version": "14.0.5",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/@types/node/-/node-14.0.5.tgz",
+      "integrity": "sha1-PQOs07NBTPZ/r5ma7RFoLtEh8is="
+    },
     "accepts": {
       "version": "1.3.7",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/accepts/-/accepts-1.3.7.tgz",
@@ -12,6 +17,16 @@
         "mime-types": "~2.1.24",
         "negotiator": "0.6.2"
       }
+    },
+    "ansicolors": {
+      "version": "0.3.2",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/ansicolors/-/ansicolors-0.3.2.tgz",
+      "integrity": "sha1-ZlWX3oap/+Oqm/vmyuXG6kJrSXk="
+    },
+    "any-promise": {
+      "version": "1.3.0",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/any-promise/-/any-promise-1.3.0.tgz",
+      "integrity": "sha1-q8av7tzqUugJzcA3au0845Y10X8="
     },
     "array-flatten": {
       "version": "1.1.1",
@@ -58,6 +73,24 @@
       "version": "3.1.0",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/bytes/-/bytes-3.1.0.tgz",
       "integrity": "sha1-9s95M6Ng4FiPqf3oVlHNx/gF0fY="
+    },
+    "cardinal": {
+      "version": "2.1.1",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/cardinal/-/cardinal-2.1.1.tgz",
+      "integrity": "sha1-fMEFXYItISlU0HsIXeolHMe8VQU=",
+      "requires": {
+        "ansicolors": "~0.3.2",
+        "redeyed": "~2.1.0"
+      }
+    },
+    "cls-bluebird": {
+      "version": "2.1.0",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/cls-bluebird/-/cls-bluebird-2.1.0.tgz",
+      "integrity": "sha1-N+8eCAqP+1XC9BZPU28ZGeeWiu4=",
+      "requires": {
+        "is-bluebird": "^1.0.2",
+        "shimmer": "^1.1.0"
+      }
     },
     "content-disposition": {
       "version": "0.5.3",
@@ -110,6 +143,11 @@
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/destroy/-/destroy-1.0.4.tgz",
       "integrity": "sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA="
     },
+    "dottie": {
+      "version": "2.0.2",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/dottie/-/dottie-2.0.2.tgz",
+      "integrity": "sha1-zJHAcmzjoFTr8RxV+8kqfyZt0VQ="
+    },
     "ee-first": {
       "version": "1.1.1",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/ee-first/-/ee-first-1.1.1.tgz",
@@ -124,6 +162,11 @@
       "version": "1.0.3",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/escape-html/-/escape-html-1.0.3.tgz",
       "integrity": "sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg="
+    },
+    "esprima": {
+      "version": "4.0.1",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/esprima/-/esprima-4.0.1.tgz",
+      "integrity": "sha1-E7BM2z5sXRnfkatph6hpVhmwqnE="
     },
     "etag": {
       "version": "1.8.1",
@@ -191,6 +234,14 @@
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/fresh/-/fresh-0.5.2.tgz",
       "integrity": "sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac="
     },
+    "generate-function": {
+      "version": "2.3.1",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/generate-function/-/generate-function-2.3.1.tgz",
+      "integrity": "sha1-8GlhdpDBDIaOc7hGV0Z2T5fDR58=",
+      "requires": {
+        "is-property": "^1.0.2"
+      }
+    },
     "http-errors": {
       "version": "1.7.2",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/http-errors/-/http-errors-1.7.2.tgz",
@@ -211,6 +262,11 @@
         "safer-buffer": ">= 2.1.2 < 3"
       }
     },
+    "inflection": {
+      "version": "1.12.0",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/inflection/-/inflection-1.12.0.tgz",
+      "integrity": "sha1-ogCTVlbW9fa8TcdQLhrstwMihBY="
+    },
     "inherits": {
       "version": "2.0.3",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/inherits/-/inherits-2.0.3.tgz",
@@ -221,6 +277,16 @@
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/ipaddr.js/-/ipaddr.js-1.9.1.tgz",
       "integrity": "sha1-v/OFQ+64mEglB5/zoqjmy9RngbM="
     },
+    "is-bluebird": {
+      "version": "1.0.2",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/is-bluebird/-/is-bluebird-1.0.2.tgz",
+      "integrity": "sha1-CWQ5Bg9KpBGr7hkUOoTWpVNG1uI="
+    },
+    "is-property": {
+      "version": "1.0.2",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/is-property/-/is-property-1.0.2.tgz",
+      "integrity": "sha1-V/4cTkhHTt1lsJkR8msc1Ald2oQ="
+    },
     "isarray": {
       "version": "1.0.0",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/isarray/-/isarray-1.0.0.tgz",
@@ -230,6 +296,24 @@
       "version": "2.3.1",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/kareem/-/kareem-2.3.1.tgz",
       "integrity": "sha1-3vEtnJQQF/q/sA+HOvlenJnhvoc="
+    },
+    "lodash": {
+      "version": "4.17.15",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/lodash/-/lodash-4.17.15.tgz",
+      "integrity": "sha1-tEf2ZwoEVbv+7dETku/zMOoJdUg="
+    },
+    "long": {
+      "version": "4.0.0",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/long/-/long-4.0.0.tgz",
+      "integrity": "sha1-mntxz7fTYaGU6lVSQckvdGjVvyg="
+    },
+    "lru-cache": {
+      "version": "5.1.1",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/lru-cache/-/lru-cache-5.1.1.tgz",
+      "integrity": "sha1-HaJ+ZxAnGUdpXa9oSOhH8B2EuSA=",
+      "requires": {
+        "yallist": "^3.0.2"
+      }
     },
     "media-typer": {
       "version": "0.3.0",
@@ -268,6 +352,19 @@
       "integrity": "sha1-R5SfmOJ56lMRn1ci4PNOUpvsAJ8=",
       "requires": {
         "mime-db": "1.44.0"
+      }
+    },
+    "moment": {
+      "version": "2.26.0",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/moment/-/moment-2.26.0.tgz",
+      "integrity": "sha1-Xh+Cxrr8pug+gIswyHBe7Q3L05o="
+    },
+    "moment-timezone": {
+      "version": "0.5.31",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/moment-timezone/-/moment-timezone-0.5.31.tgz",
+      "integrity": "sha1-nEDYxQJvDHq0bto9Y+ScFVFI3gU=",
+      "requires": {
+        "moment": ">= 2.9.0"
       }
     },
     "mongodb": {
@@ -345,6 +442,56 @@
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/ms/-/ms-2.0.0.tgz",
       "integrity": "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g="
     },
+    "mysql2": {
+      "version": "2.1.0",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/mysql2/-/mysql2-2.1.0.tgz",
+      "integrity": "sha1-Vez9Q1MRTBSMxMJTGS27/QAOZkI=",
+      "requires": {
+        "cardinal": "^2.1.1",
+        "denque": "^1.4.1",
+        "generate-function": "^2.3.1",
+        "iconv-lite": "^0.5.0",
+        "long": "^4.0.0",
+        "lru-cache": "^5.1.1",
+        "named-placeholders": "^1.1.2",
+        "seq-queue": "^0.0.5",
+        "sqlstring": "^2.3.1"
+      },
+      "dependencies": {
+        "iconv-lite": {
+          "version": "0.5.1",
+          "resolved": "http://www.kingerwu.com:11000/repository/npm-group/iconv-lite/-/iconv-lite-0.5.1.tgz",
+          "integrity": "sha1-skJdPHsY9yGfLKZj0QO925FxjWQ=",
+          "requires": {
+            "safer-buffer": ">= 2.1.2 < 3"
+          }
+        }
+      }
+    },
+    "named-placeholders": {
+      "version": "1.1.2",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/named-placeholders/-/named-placeholders-1.1.2.tgz",
+      "integrity": "sha1-zrH7/1C2szSStc8hTM9eOc7z0Og=",
+      "requires": {
+        "lru-cache": "^4.1.3"
+      },
+      "dependencies": {
+        "lru-cache": {
+          "version": "4.1.5",
+          "resolved": "http://www.kingerwu.com:11000/repository/npm-group/lru-cache/-/lru-cache-4.1.5.tgz",
+          "integrity": "sha1-i75Q6oW+1ZvJ4z3KuCNe6bz0Q80=",
+          "requires": {
+            "pseudomap": "^1.0.2",
+            "yallist": "^2.1.2"
+          }
+        },
+        "yallist": {
+          "version": "2.1.2",
+          "resolved": "http://www.kingerwu.com:11000/repository/npm-group/yallist/-/yallist-2.1.2.tgz",
+          "integrity": "sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI="
+        }
+      }
+    },
     "negotiator": {
       "version": "0.6.2",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/negotiator/-/negotiator-0.6.2.tgz",
@@ -382,6 +529,11 @@
         "ipaddr.js": "1.9.1"
       }
     },
+    "pseudomap": {
+      "version": "1.0.2",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/pseudomap/-/pseudomap-1.0.2.tgz",
+      "integrity": "sha1-8FKijacOYYkX7wqKw0wa5aaChrM="
+    },
     "qs": {
       "version": "6.7.0",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/qs/-/qs-6.7.0.tgz",
@@ -417,6 +569,14 @@
         "util-deprecate": "~1.0.1"
       }
     },
+    "redeyed": {
+      "version": "2.1.1",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/redeyed/-/redeyed-2.1.1.tgz",
+      "integrity": "sha1-iYS1gV2ZyyIEacme7v/jiRPmzAs=",
+      "requires": {
+        "esprima": "~4.0.0"
+      }
+    },
     "regexp-clone": {
       "version": "1.0.0",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/regexp-clone/-/regexp-clone-1.0.0.tgz",
@@ -435,6 +595,14 @@
       "version": "2.0.0",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/resolve-from/-/resolve-from-2.0.0.tgz",
       "integrity": "sha1-lICrIOlP+h2egKgEx+oUdhGWa1c="
+    },
+    "retry-as-promised": {
+      "version": "3.2.0",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/retry-as-promised/-/retry-as-promised-3.2.0.tgz",
+      "integrity": "sha1-dp9j1Ta+xHg1SdsHd8tW2t2dhUM=",
+      "requires": {
+        "any-promise": "^1.3.0"
+      }
     },
     "safe-buffer": {
       "version": "5.1.2",
@@ -487,6 +655,58 @@
         }
       }
     },
+    "seq-queue": {
+      "version": "0.0.5",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/seq-queue/-/seq-queue-0.0.5.tgz",
+      "integrity": "sha1-1WgS4cAXpuTnw+Ojeh2m143TyT4="
+    },
+    "sequelize": {
+      "version": "5.21.10",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/sequelize/-/sequelize-5.21.10.tgz",
+      "integrity": "sha1-p93F9/p8EttvskqSySELUvwaWdU=",
+      "requires": {
+        "bluebird": "^3.5.0",
+        "cls-bluebird": "^2.1.0",
+        "debug": "^4.1.1",
+        "dottie": "^2.0.0",
+        "inflection": "1.12.0",
+        "lodash": "^4.17.15",
+        "moment": "^2.24.0",
+        "moment-timezone": "^0.5.21",
+        "retry-as-promised": "^3.2.0",
+        "semver": "^6.3.0",
+        "sequelize-pool": "^2.3.0",
+        "toposort-class": "^1.0.1",
+        "uuid": "^3.3.3",
+        "validator": "^10.11.0",
+        "wkx": "^0.4.8"
+      },
+      "dependencies": {
+        "debug": {
+          "version": "4.1.1",
+          "resolved": "http://www.kingerwu.com:11000/repository/npm-group/debug/-/debug-4.1.1.tgz",
+          "integrity": "sha1-O3ImAlUQnGtYnO4FDx1RYTlmR5E=",
+          "requires": {
+            "ms": "^2.1.1"
+          }
+        },
+        "ms": {
+          "version": "2.1.2",
+          "resolved": "http://www.kingerwu.com:11000/repository/npm-group/ms/-/ms-2.1.2.tgz",
+          "integrity": "sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk="
+        },
+        "semver": {
+          "version": "6.3.0",
+          "resolved": "http://www.kingerwu.com:11000/repository/npm-group/semver/-/semver-6.3.0.tgz",
+          "integrity": "sha1-7gpkyK9ejO6mdoexM3YeG+y9HT0="
+        }
+      }
+    },
+    "sequelize-pool": {
+      "version": "2.3.0",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/sequelize-pool/-/sequelize-pool-2.3.0.tgz",
+      "integrity": "sha1-ZPH+h0QigXLEdPUwYEthM75kmT0="
+    },
     "serve-static": {
       "version": "1.14.1",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/serve-static/-/serve-static-1.14.1.tgz",
@@ -502,6 +722,11 @@
       "version": "1.1.1",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/setprototypeof/-/setprototypeof-1.1.1.tgz",
       "integrity": "sha1-fpWsskqpL1iF4KvvW6ExMw1K5oM="
+    },
+    "shimmer": {
+      "version": "1.2.1",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/shimmer/-/shimmer-1.2.1.tgz",
+      "integrity": "sha1-YQhZ994ye1h+/r9QH7QxF/mv8zc="
     },
     "sift": {
       "version": "7.0.1",
@@ -522,6 +747,11 @@
         "memory-pager": "^1.0.2"
       }
     },
+    "sqlstring": {
+      "version": "2.3.2",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/sqlstring/-/sqlstring-2.3.2.tgz",
+      "integrity": "sha1-za5xaTiaE3WxjohfLmCz5GCAlRQ="
+    },
     "statuses": {
       "version": "1.5.0",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/statuses/-/statuses-1.5.0.tgz",
@@ -539,6 +769,11 @@
       "version": "1.0.0",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/toidentifier/-/toidentifier-1.0.0.tgz",
       "integrity": "sha1-fhvjRw8ed5SLxD2Uo8j013UrpVM="
+    },
+    "toposort-class": {
+      "version": "1.0.1",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/toposort-class/-/toposort-class-1.0.1.tgz",
+      "integrity": "sha1-f/0feMi+KMO6Rc1OGj9e4ZO9mYg="
     },
     "type-is": {
       "version": "1.6.18",
@@ -564,10 +799,33 @@
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/utils-merge/-/utils-merge-1.0.1.tgz",
       "integrity": "sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM="
     },
+    "uuid": {
+      "version": "3.4.0",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/uuid/-/uuid-3.4.0.tgz",
+      "integrity": "sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4="
+    },
+    "validator": {
+      "version": "10.11.0",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/validator/-/validator-10.11.0.tgz",
+      "integrity": "sha1-ADEI6m6amHTTHMyeUAaFbM12sig="
+    },
     "vary": {
       "version": "1.1.2",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/vary/-/vary-1.1.2.tgz",
       "integrity": "sha1-IpnwLG3tMNSllhsLn3RSShj2NPw="
+    },
+    "wkx": {
+      "version": "0.4.8",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/wkx/-/wkx-0.4.8.tgz",
+      "integrity": "sha1-oJLPCI0RJoP9xxgv0xSTssWCAAM=",
+      "requires": {
+        "@types/node": "*"
+      }
+    },
+    "yallist": {
+      "version": "3.1.1",
+      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/yallist/-/yallist-3.1.1.tgz",
+      "integrity": "sha1-27fa+b/YusmrRev2ArjLrQ1dCP0="
     }
   }
 }
