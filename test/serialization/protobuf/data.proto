@@ -1,0 +1,17 @@
+syntax = "proto3";
+package protobuf;
+
+message Info {
+    string a = 1;
+    float b = 2;
+}
+
+message Item {
+    repeated float position = 1;
+    int32 index = 2;
+    Info info = 3;
+}
+
+message Data {
+    repeated Item items = 1;
+}

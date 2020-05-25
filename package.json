@@ -20,6 +20,7 @@
     "express": "4.17.1",
     "mongoose": "5.9.15",
     "mysql2": "2.1.0",
+    "protobufjs": "6.9.0",
     "sequelize": "5.21.10"
   }
 }
