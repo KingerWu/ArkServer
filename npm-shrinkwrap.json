@@ -1067,6 +1067,11 @@
             "glob": "^7.0.5",
             "yargs": "^3.10.0"
           }
+        },
+        "uuid": {
+          "version": "3.4.0",
+          "resolved": "http://www.kingerwu.com:11000/repository/npm-group/uuid/-/uuid-3.4.0.tgz",
+          "integrity": "sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4="
         }
       }
     },
@@ -1104,6 +1109,11 @@
           "version": "2.1.2",
           "resolved": "http://www.kingerwu.com:11000/repository/npm-group/ms/-/ms-2.1.2.tgz",
           "integrity": "sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk="
+        },
+        "uuid": {
+          "version": "3.4.0",
+          "resolved": "http://www.kingerwu.com:11000/repository/npm-group/uuid/-/uuid-3.4.0.tgz",
+          "integrity": "sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4="
         }
       }
     },
@@ -1559,6 +1569,11 @@
           "version": "6.5.2",
           "resolved": "http://www.kingerwu.com:11000/repository/npm-group/qs/-/qs-6.5.2.tgz",
           "integrity": "sha1-yzroBuh0BERYTvFUzo7pjUA/PjY="
+        },
+        "uuid": {
+          "version": "3.4.0",
+          "resolved": "http://www.kingerwu.com:11000/repository/npm-group/uuid/-/uuid-3.4.0.tgz",
+          "integrity": "sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4="
         }
       }
     },
@@ -1679,6 +1694,11 @@
           "version": "6.3.0",
           "resolved": "http://www.kingerwu.com:11000/repository/npm-group/semver/-/semver-6.3.0.tgz",
           "integrity": "sha1-7gpkyK9ejO6mdoexM3YeG+y9HT0="
+        },
+        "uuid": {
+          "version": "3.4.0",
+          "resolved": "http://www.kingerwu.com:11000/repository/npm-group/uuid/-/uuid-3.4.0.tgz",
+          "integrity": "sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4="
         }
       }
     },
@@ -1879,11 +1899,6 @@
       "version": "1.0.1",
       "resolved": "http://www.kingerwu.com:11000/repository/npm-group/utils-merge/-/utils-merge-1.0.1.tgz",
       "integrity": "sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM="
-    },
-    "uuid": {
-      "version": "3.4.0",
-      "resolved": "http://www.kingerwu.com:11000/repository/npm-group/uuid/-/uuid-3.4.0.tgz",
-      "integrity": "sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4="
     },
     "validator": {
       "version": "10.11.0",

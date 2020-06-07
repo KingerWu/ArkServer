@@ -1,25 +1,28 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser')
 
-// 路由测试
-app.use('/rest', require('./router/rest'));
-app.use('/path', require('./router/path'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// 中间件测试
-app.use('/middle', require('./router/middleware'));
+app.all('/*', function (req, res, next) {
+    let offset = 0;
+    let limit = 30;
+    if (req.query) {
+        offset = req.query.page ? parseInt(req.query.page) : offset;
+        limit = req.query.per_page ? parseInt(req.query.per_page) : limit;
+    }
+    req.offset = offset;
+    req.limit = limit;
 
-app.get('/error', function (req, res) {
-    throw new Error("test error.");
+    next();
 });
 
-app.use(function (req, res, next) {
-    res.status(404).send('Sorry cant find that!');
-});
+app.use('/v1', require('./router/v1/user'));
+app.use('/v1', require('./router/v1/fav'));
+app.use('/v1', require('./router/v1/song'));
 
-app.use(function (err, req, res, next) {
-    console.error(err.stack);
-    res.status(500).send('Something broke!');
-});
+app.use(require('./router/common/index'));
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');
