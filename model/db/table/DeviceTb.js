@@ -1,14 +1,14 @@
 const Table = require("../table");
 const Sequelize = require('sequelize');
 
-class UserTb extends Table.MySqlTable {
+class DeviceTb extends Table.MySqlTable {
     constructor() {
         this.id = 0;
-        this.name = "";
-        this.pass = "";
+        this.key = "";
+        this.token = "";
     }
     static tableName() {
-        return "user_tb";
+        return "device_tb";
     }
 
     static tableDefinition() {
@@ -18,24 +18,17 @@ class UserTb extends Table.MySqlTable {
                 primaryKey: true,
                 autoIncrement: true,
             },
-            name: {
+            key: {
                 type: Sequelize.STRING(20),
                 allowNull: false,
                 unique: true
             },
-            pass: {
+            token: {
                 type: Sequelize.STRING(100),
                 allowNull: false
             }
         };
     }
-
-    static register(user, pass) {
-        return this.createOne({
-            name: user,
-            pass: pass
-        })
-    }
 }
 
-module.exports = UserTb;
+module.exports = DeviceTb;
