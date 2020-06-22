@@ -17,6 +17,16 @@ client.on('error', function (err) {
 client.set("string key", "string value", redis.print);
 client.get("string key", redis.print)
 
+client.get("string test", (err, value) => {
+    if (err) {
+        console.log("err", err);
+    }
+    else {
+        console.log("value", value);
+    }
+})
+client.del("string key", redis.print)
+
 client.quit(function (err, res) {
     console.log('Exiting from quit command.');
 });
