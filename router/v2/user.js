@@ -69,7 +69,7 @@ router.post('/users', Utils.asyncWrapper(async function (req, res) {
                     res.json({
                         "user": result.name,
                         "access_token": accessToken,
-                        "refresh_token": tokenResult.refreshToken,
+                        "refresh_token": tokenResult.refresh_token,
                     });
                 }
             }
@@ -146,7 +146,7 @@ router.put('/users/sessions/:user', Utils.asyncWrapper(async function (req, res)
                 res.json({
                     "user": result.name,
                     "access_token": accessToken,
-                    "refresh_token": tokenResult.refreshToken,
+                    "refresh_token": tokenResult.refresh_token,
                 });
             }
             else {

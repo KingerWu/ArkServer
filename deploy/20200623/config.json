@@ -1,0 +1,22 @@
+{
+    "mongo": {
+        "url": "mongodb://172.17.0.1:15000/learn",
+        "user": "learn",
+        "pass": "123456"
+    },
+    "mysql": {
+        "host": "172.17.0.1",
+        "port": 15001,
+        "db": "learn",
+        "user": "root",
+        "pass": "123456"
+    },
+    "redis": {
+        "host": "172.17.0.1",
+        "port": 15002,
+        "pass": "123456"
+    },
+    "common": {
+        "port": 80
+    }
+}
