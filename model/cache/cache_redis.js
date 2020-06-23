@@ -1,10 +1,11 @@
 const BaseCache = require("./cache_common");
+const Config = require("../../config");
 // 连接redis数据库
 const redis = require('redis');
 const client = redis.createClient({
-    host: "127.0.0.1",
-    port: 6379,
-    password: "123456"
+    host: Config.redis.host,
+    port: Config.redis.port,
+    password: Config.redis.pass
 });
 
 client.on('connect', function () {

@@ -1,12 +1,12 @@
 const BaseDao = require("./db_common");
 const Sequelize = require('sequelize');
-
+const Config = require("../../../config");
 
 // 创建mysql连接池
-const sequelize = new Sequelize('learn', 'root', '123456', {
+const sequelize = new Sequelize(Config.mysql.db, Config.mysql.user, Config.mysql.pass, {
     dialect: 'mysql',
-    host: 'localhost',
-    port: 3306,
+    host: Config.mysql.host,
+    port: Config.mysql.port,
     pool: {
         max: 5,
         min: 0,

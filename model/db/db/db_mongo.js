@@ -1,15 +1,16 @@
 const BaseDao = require("./db_common");
 const mongoose = require('mongoose');
+const Config = require("../../../config");
 
 const options = {
     keepAlive: 120,
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    user: "learn",
-    pass: "123456",
+    user: Config.mongo.user,
+    pass: Config.mongo.pass,
 };
 
-mongoose.connect('mongodb://localhost:27017/learn', options);
+mongoose.connect(Config.mongo.url, options);
 // 让 mongoose 使用全局 Promise 库
 mongoose.Promise = global.Promise;
 

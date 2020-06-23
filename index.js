@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser')
 const Model = require("./model");
+const Config = require("./config");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -23,6 +24,6 @@ app.use(function (err, req, res, next) {
 });
 
 
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+app.listen(Config.common.port, function () {
+    console.log("服务器已经启动:" + Config.common.port);
 });
