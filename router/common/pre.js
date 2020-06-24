@@ -4,9 +4,17 @@ const requestSign = require("../../lib/auth/requestSign");
 const Model = require("../../model");
 const Utils = require("../../utils/utils");
 const Auth = require("../../lib/auth/auth");
+const path = require("path");
+const fs = require('fs');
+
+const apiValue = fs.readFileSync(path.join(__dirname, "./api.json"), 'utf-8');
+const ApiLists = JSON.parse(apiValue);
 
 // 允许通过的AccessToken 列表
 const allowLists = [
+    // 根地址
+    /\/$/,
+
     // v1的全部接口都不需要
     /\/v1\/[\s\S]*$/,
 
@@ -28,7 +36,7 @@ router.all('/*', Utils.asyncWrapper(async function (req, res, next) {
 // 验证接口的签名是否正确
 router.all('/*', Utils.asyncWrapper(async function (req, res, next) {
     // 不处理v1的接口
-    if (req.path.startsWith("/v1/")) {
+    if (req.path.startsWith("/v1/") || req.path === "/") {
         next();
     }
     else {
@@ -85,6 +93,11 @@ router.all('/*', Utils.asyncWrapper(async function (req, res, next) {
         }
     }
 }));
+// 根地址
+router.all('/', function (req, res, next) {
+    res.status(200);
+    res.json(ApiLists);
+});
 
 // 添加对应的offset 和 limit
 router.all('/*', function (req, res, next) {
