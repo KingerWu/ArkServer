@@ -7,15 +7,16 @@ const Auth = require("../../lib/auth/auth");
 
 // 允许通过的AccessToken 列表
 const allowLists = [
-    /\/v2\/users$/,
-    /\/v1\/users\/sessions\/[\s\S]*$/,
-    /\/v1\/songs\/search$/,
-    /\/v1\/songs\/[\s\S]*$/,
+    // v1的全部接口都不需要
+    /\/v1\/[\s\S]*$/,
 
     /\/v2\/users$/,
     /\/v2\/users\/sessions\/[\s\S]*$/,
     /\/v2\/songs\/search$/,
     /\/v2\/songs\/[\s\S]*$/,
+
+    /\/v3\/songs\/search$/,
+    /\/v3\/songs\/[\s\S]*$/,
 ];
 
 // 设置统一回复头
