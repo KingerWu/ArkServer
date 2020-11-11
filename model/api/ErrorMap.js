@@ -50,15 +50,7 @@ const ErrMap = {
     AccessTokenInvalid: new Err(401, 10008, "access token 错误"),
     AccessTokenExpired: new Err(401, 10009, "access token 过期"),
     AccessTokenNull: new Err(401, 10010, "access token 缺失"),
-
-    FavExist: new Err(403, 11000, "收藏列表已存在"),
-    FavNotExist: new Err(404, 11001, "收藏列表不存在"),
-    SongAlreadyInFav: new Err(403, 11002, "歌曲已存在此收藏列表中"),
-    FavInconformity: new Err(403, 11003, "收藏列表不符合格式要求"),
-
-    SongNotExist: new Err(404, 12000, "歌曲未收录"),
-    SearchKeyInconformity: new Err(400, 12001, "搜索关键字不符合格式要求"),
-
+    
     ApiTooLow: new Err(403, 13000, "请升级到最新的客户端"),
     SignCheckFail: new Err(403, 13001, "接口验证签名失败"),
     SignParamLost: new Err(403, 13002, "接口签名字段缺失, 缺失字段:${1}"),

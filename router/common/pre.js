@@ -20,11 +20,6 @@ const allowLists = [
 
     /\/v2\/users$/,
     /\/v2\/users\/sessions\/[\s\S]*$/,
-    /\/v2\/songs\/search$/,
-    /\/v2\/songs\/[\s\S]*$/,
-
-    /\/v3\/songs\/search$/,
-    /\/v3\/songs\/[\s\S]*$/,
 ];
 
 // 设置统一回复头

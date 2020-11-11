@@ -7,9 +7,6 @@ router.all('/v1/*', function (req, res) {
     Model.ErrorMap.ApiTooLow.toResponse(res);
 });
 
-router.use('/v1', require('./song'));
 router.use('/v1', require('./user'));
-router.use('/v1', require('./fav'));
-
 
 module.exports = router;

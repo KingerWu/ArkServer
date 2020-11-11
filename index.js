@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(require('./router/common/pre'));
 
-app.use(require('./router/v3/index'));
+
 app.use(require('./router/v2/index'));
 app.use(require('./router/v1/index'));
 

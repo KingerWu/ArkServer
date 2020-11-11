@@ -1,32 +1,10 @@
 {
-    "v3": {
-        "get 搜索歌曲": "/songs/search",
-        "get 获取歌曲详情": "/songs/:song_id"
-    },
     "v2": {
         "post 用户注册": "/users",
-        "post 用户登录": "/users/sessions/:user",
-        "get 获取收藏列表合集": "/users/:user/favs",
-        "post 创建收藏列表": "/users/:user/favs",
-        "put 更新收藏列表": "/users/:user/favs/:fav_id",
-        "delete 删除收藏列表": "/users/:user/favs/:fav_id",
-        "get 获取收藏列表中的歌曲合集": "/users/:user/favs/:fav_id/songs",
-        "post 添加歌曲到收藏列表中": "/users/:user/favs/:fav_id/songs",
-        "delete 删除收藏列表中的歌曲": "/users/:user/favs/:fav_id/songs/:song_id",
-        "get 搜索歌曲 @deprecated": "/songs/search",
-        "get 获取歌曲详情 @deprecated ": "/songs/:song_id"
+        "post 用户登录": "/users/sessions/:user"
     },
     "v1": {
         "post 用户注册 @deprecated": "/users",
-        "post 用户登录 @deprecated": "/users/sessions/:user",
-        "get 获取收藏列表合集 @deprecated": "/users/:user/favs",
-        "post 创建收藏列表 @deprecated": "/users/:user/favs",
-        "put 更新收藏列表 @deprecated": "/users/:user/favs/:fav_id",
-        "delete 删除收藏列表 @deprecated": "/users/:user/favs/:fav_id",
-        "get 获取收藏列表中的歌曲合集 @deprecated": "/users/:user/favs/:fav_id/songs",
-        "post 添加歌曲到收藏列表中 @deprecated": "/users/:user/favs/:fav_id/songs",
-        "delete 删除收藏列表中的歌曲 @deprecated": "/users/:user/favs/:fav_id/songs/:song_id",
-        "get 搜索歌曲 @deprecated": "/songs/search",
-        "get 获取歌曲详情 @deprecated": "/songs/:song_id"
+        "post 用户登录 @deprecated": "/users/sessions/:user"
     }
 }
