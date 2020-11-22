@@ -1,29 +1,40 @@
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser')
-const Model = require("./model");
-const Config = require("./config");
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// restful api ，根据express-generator的内容，这部分适合抽象到router中
+app.get('/', function (req, res) {
+    res.send('Hello World!');
+});
 
-app.use(require('./router/common/pre'));
+app.post('/', function (req, res) {
+    res.send('Got a POST request');
+});
 
+app.put('/user', function (req, res) {
+    res.send('Got a PUT request at /user');
+});
 
-app.use(require('./router/v2/index'));
-app.use(require('./router/v1/index'));
+app.delete('/user', function (req, res) {
+    res.send('Got a DELETE request at /user');
+});
 
+// error test
+app.get('/error', function (req, res) {
+    throw new Error("test error.");
+});
+
+// 当路由无法找到的时候，跳转404页面
 app.use(function (req, res, next) {
-    console.log("404", req.url);
-    Model.ErrorMap.RouteNotExist.toResponse(res);
+    res.status(404).send('Sorry cant find that!');
 });
 
+// 当执行错误时，跳转500页面
 app.use(function (err, req, res, next) {
-    console.log("500", err);
-    Model.ErrorMap.ServerInnerError.toResponse(res);
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
 });
 
-
-app.listen(Config.common.port, function () {
-    console.log("服务器已经启动:" + Config.common.port);
+// 监听3000端口
+app.listen(3000, function () {
+    console.log('Example app listening on port 3000!');
 });
