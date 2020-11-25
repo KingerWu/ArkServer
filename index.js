@@ -1,40 +1,32 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const db = require("./src/db");
+const cache = require("./src/cache");
+const log = require("./src/log");
+const config = require("./src/config");
 
-// restful api ，根据express-generator的内容，这部分适合抽象到router中
-app.get('/', function (req, res) {
-    res.send('Hello World!');
+let tasks = [];
+
+tasks.push(db.init());
+tasks.push(cache.init());
+
+let taskApp = new Promise((resolve, reject) => {
+    app.listen(config.common.port, function () {
+        log.i("服务器已经启动:" + config.common.port);
+        resolve();
+    })
+    .on('error', function(err) { 
+        reject(err);
+    });;
 });
+tasks.push(taskApp);
 
-app.post('/', function (req, res) {
-    res.send('Got a POST request');
-});
-
-app.put('/user', function (req, res) {
-    res.send('Got a PUT request at /user');
-});
-
-app.delete('/user', function (req, res) {
-    res.send('Got a DELETE request at /user');
-});
-
-// error test
-app.get('/error', function (req, res) {
-    throw new Error("test error.");
-});
-
-// 当路由无法找到的时候，跳转404页面
-app.use(function (req, res, next) {
-    res.status(404).send('Sorry cant find that!');
-});
-
-// 当执行错误时，跳转500页面
-app.use(function (err, req, res, next) {
-    console.error(err.stack);
-    res.status(500).send('Something broke!');
-});
-
-// 监听3000端口
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+Promise.all(tasks).then(() => {
+    log.i("*****************************************");
+    log.i("所有服务已经启动完成，软件正常运行");
+})
+.catch((err) => {
+    log.e("服务启动异常，退出程序");
+    log.e("错误信息：" + err);
+    process.exit();
 });
