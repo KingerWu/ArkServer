@@ -47,6 +47,27 @@ class Db {
             });
         });
     }
+
+    create(tb, obj) {
+        return new Promise((resolve, reject) => {
+            tb(obj).save().then(result => {
+                resolve(result);
+            });
+        });
+    }
+
+    findOne(tb, conditions) {
+        return new Promise((resolve, reject) => {
+            tb.findOne(conditions, function (err, value) {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                resolve(value);
+            });
+        });
+    }
+
 }
 
 module.exports = new Db();
