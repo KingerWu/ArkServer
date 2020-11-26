@@ -6,6 +6,10 @@ class Db {
     constructor() {
         this.db = null;
     }
+    getDb() {
+        return this.db;
+    }
+
     init() {
         let that = this;
         return new Promise((resolve, reject) => {
