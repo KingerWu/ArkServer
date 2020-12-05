@@ -9,6 +9,12 @@
         "port": 6379,
         "pass": "123456"
     },
+    "email": {
+        "host": "",
+        "port": 465,
+        "user": "",
+        "pass": ""
+    },
     "common": {
         "port": 3000
     }

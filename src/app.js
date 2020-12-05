@@ -2,13 +2,17 @@ const config = require("./config");
 const log = require("./log");
 const express = require('express');
 const app = express();
+var bodyParser = require('body-parser')
 
 class App {
 
     init() {
         let that = this;
         return new Promise((resolve, reject) => {
-            
+            app.use(bodyParser.json());
+            app.use(bodyParser.urlencoded({ extended: true }));
+
+
             app.use(require('./router/pre/index'));
             app.use(require('./router/v1/index'));
             app.use(require('./router/after/index'));

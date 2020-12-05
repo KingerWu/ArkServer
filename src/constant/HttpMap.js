@@ -4,7 +4,10 @@ class Result {
         this.body = body;
     }
 
-    to(res) {
+    to(res, body) {
+        if (body) {
+            this.body = body;
+        }
         res.status(this.httpCode).send(JSON.stringify(this.body));
     }
 }
@@ -12,6 +15,7 @@ class Result {
 const HttpMap = {
     CREATE: new Result(201),
     POST: new Result(201),
+    UPDATE: new Result(200),
     GET: new Result(200),
     DELETE: new Result(204),
 }

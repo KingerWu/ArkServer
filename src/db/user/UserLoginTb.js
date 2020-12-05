@@ -27,7 +27,7 @@
 // ```
 
 const mongoose = require('mongoose');
-const db = require('./index');
+const db = require('../index');
 
 const schema = new mongoose.Schema({
     user_id: mongoose.Schema.Types.ObjectId,

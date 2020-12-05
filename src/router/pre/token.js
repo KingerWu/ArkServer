@@ -7,14 +7,29 @@ const utils = require("../../utils/index")
 // 允许通过的AccessToken 列表
 const allowLists = [
     // 根地址
-    /\/$/,
+    {
+        type: "get",
+        value: /\/$/,
+    },
+    {
+        type: "post",
+        value: /\/v1\/email$/,
+    },
+    {
+        type: "post",
+        value: /\/v1\/users$/,
+    },
+    {
+        type: "post",
+        value: /\/v1\/sessions$/,
+    },
 ];
 
 // check access token
 router.all('/*', utils.asyncWrapper(async function (req, res, next) {
     let allow = false;
     allowLists.forEach(allowItem => {
-        if (allowItem.test(req.path)) {
+        if (allowItem.type.toLowerCase() === req.method.toLowerCase()  && allowItem.value.test(req.path)) {
             allow = true;
         }
     })

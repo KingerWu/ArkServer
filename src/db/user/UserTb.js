@@ -13,11 +13,11 @@
 // ```
 
 const mongoose = require('mongoose');
-const db = require('./index');
+const db = require('../index');
 
 const schema = new mongoose.Schema({
-    email: String,
-    name: String,
+    email: { type: String, unique: true, dropDups: true },
+    name: { type: String, unique: true, dropDups: true },
     password: String,
     is_vip: Boolean
 });

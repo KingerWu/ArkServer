@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const config = require("../config");
 const log = require("../log");
+const ObjectId = require('mongoose').Types.ObjectId; 
 
 class Db {
     constructor() {
@@ -8,6 +9,10 @@ class Db {
     }
     getDb() {
         return this.db;
+    }
+
+    getObjectId(_id) {
+        return new ObjectId(_id);
     }
 
     init() {

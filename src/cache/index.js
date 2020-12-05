@@ -51,6 +51,20 @@ class Cache {
         });
     }
 
+    setEx(key, value, timeout) {
+        let that = this;
+        return new Promise((resolve, reject) => {
+            that.cache.set(key, value, 'EX', timeout, (err, value) => {
+                if (err) {
+                    reject(err);
+                }
+                else {
+                    resolve(value);
+                }
+            });
+        });
+    }
+
     get(key) {
         let that = this;
         return new Promise((resolve, reject) => {
