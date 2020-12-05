@@ -665,6 +665,60 @@ router.delete("/users", [
     body('pass').notEmpty(),
 ], utils.asyncWrapper(async function (req, res) {
     // 删除用户
+    let checkParamResult = validationResult(req);
+    if (!checkParamResult.isEmpty()) {
+        constant.ErrorMap.RequestParamLost.to(res, {
+            errors: checkParamResult.array()
+        });
+        return;
+    }
+    let pass = req.body.pass;
+    let code = req.body.code;
+
+    // 将密码解密
+    let decrytResult = null;
+    try {
+        decrytResult = auth.rsaDecrypt(pass);
+        // 校验密码是否符合规则
+        if (regex.checkPassValid(decrytResult)) {
+            // 检查验证码是否正确
+            let lastCodes = await checkLastOneValidEmail(email, constant.ConstantMap.UserCodeTypeLogOff, code);
+            if (lastCodes && lastCodes.length > 0){
+                // 将验证码设置为使用过
+                let lastCode = lastCodes[0];
+                lastCode.is_used = true;
+                await lastCode.save();
+
+                // 注销用户
+                let users = await queryUserById(req.jwt.id);
+                if (users && users.length > 0) {
+                    let saltPass = auth.saltPass(decrytResult);
+
+                    let user = users[0];
+
+                    if (user.pass === saltPass) {
+                        await user.remove();
+                        constant.HttpMap.DELETE.to(res);
+                        // TODO 应该还需要定时任务去删除关联数据 
+                    }
+                    else {
+                        constant.ErrorMap.PasswordError.to(res);
+                    }
+                }
+                else {
+                    constant.ErrorMap.AccessTokenInvalid.to(res);
+                }
+            }
+            else {
+                constant.ErrorMap.CodeError.to(res);
+            }
+        }
+        else {
+            constant.ErrorMap.PasswordInconformity.to(res);
+        }
+    } catch (error) {
+        constant.ErrorMap.PasswordDecryptError.to(res);
+    }    
 }));
 
 module.exports = router;
