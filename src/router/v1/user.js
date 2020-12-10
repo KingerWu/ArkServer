@@ -198,7 +198,7 @@ function getLastOneHoursLoginLog(id) {
         let query = UserLoginTb.find({ _id: db.getObjectId(id),  type: constant.ConstantMap.UserLoginStatusLoginFailWithPass});
         query.where("login_time").gt(currentTime);
         query.sort({ login_time: - 1 });
-        query.exec(function (error, userCodes) {
+        query.exec(function (error, userLogs) {
             if (error) {
                 reject(error);
             }
@@ -454,7 +454,7 @@ router.post("/sessions", [
         return;
     }
 
-    let email = req.body.email;
+    let email = req.body.email; 
     let pass = req.body.pass;
 
     let type = req.body.type;

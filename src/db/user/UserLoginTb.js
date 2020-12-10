@@ -38,7 +38,7 @@ const schema = new mongoose.Schema({
     device_id: String,
     device_model: String,
     device_version: String,
-    version_code: String,
+    version_code: Number,
     version_name: String,
 });
 

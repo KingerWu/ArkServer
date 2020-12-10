@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "debug": "DEBUG=express:* node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,8 +26,10 @@
     "jsonwebtoken": "8.5.1",
     "moment": "2.29.1",
     "mongoose": "5.10.15",
+    "multer": "1.4.2",
     "node-rsa": "1.1.1",
     "nodemailer": "6.4.16",
-    "redis": "3.0.2"
+    "redis": "3.0.2",
+    "uuid": "8.3.2"
   }
 }

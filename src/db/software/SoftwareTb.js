@@ -37,7 +37,7 @@ const schema = new mongoose.Schema({
     // 升级类型 （Android = 1、iOS = 2, Web = 3）
     type: Number,
     // 软件版本-机械号
-    version_code: String,
+    version_code: Number,
     // 软件版本-名称
     version_name: String,
     // 升级开始时间

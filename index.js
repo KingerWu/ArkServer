@@ -1,5 +1,6 @@
 const db = require("./src/db");
 const cache = require("./src/cache");
+const UploadUtils = require("./src/libs/file/file");
 const log = require("./src/log");
 
 
@@ -8,6 +9,7 @@ let tasks = [];
 // 启动数据库 启动缓存
 tasks.push(db.init());
 tasks.push(cache.init());
+tasks.push(UploadUtils.init());
 
 Promise.all(tasks).then(() => {
     // 启动应用

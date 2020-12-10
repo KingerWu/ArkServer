@@ -6,9 +6,11 @@ class Result {
 
     to(res, body) {
         if (body) {
-            this.body = body;
+            res.status(this.httpCode).send(JSON.stringify(body));
         }
-        res.status(this.httpCode).send(JSON.stringify(this.body));
+        else {
+            res.status(this.httpCode).send(JSON.stringify(this.body));
+        }
     }
 }
 
