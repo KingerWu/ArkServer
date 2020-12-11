@@ -51,6 +51,10 @@ class UploadUtils {
     upload(req, res, cb) {
         uploadOpt(req, res, cb);
     }
+
+    getRealPath(user_id, file) {
+        return uploadPath + "/" + user_id + "/" + file;
+    }
 }
 
 

@@ -5,7 +5,7 @@ const { getDb } = require("../db");
  * @param {*} email 
  */
 function isEmail(email) {
-    let reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/ ;
+    let reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
     return reg.test(email);
 }
 /**
@@ -30,8 +30,20 @@ function checkPassValid(pass) {
 }
 
 
+function getFileSuffix(filename) {
+    // 文件扩展名匹配正则
+    let reg = /\.[^\.]+$/;
+    let matches = reg.exec(filename);
+    if (matches) {
+        return matches[0];
+    }
+
+    return '';
+}
+
 module.exports = {
     isEmail,
     isNumber,
-    checkPassValid
+    checkPassValid,
+    getFileSuffix
 };

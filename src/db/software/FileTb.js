@@ -24,6 +24,8 @@ const db = require('../index');
 const schema = new mongoose.Schema({
     // 用户id 上传者
     user_id: mongoose.Schema.Types.ObjectId,
+    // 文档类别
+    mime_type: String,
     // 文件后缀
     file_suffix: String,
     // 文件名称

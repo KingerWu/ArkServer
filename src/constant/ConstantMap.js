@@ -19,6 +19,10 @@ const ConstantMap = {
     UserChangeTypeName: 1,
     UserChangeTypeEmail: 2,
     UserChangeTypePass: 3,
+
+    // 文件类型 （私有专属 = 1， 全局分享 = 2）
+    FileModePrivate: 1,
+    FileModePublic: 2,
 }
 
 module.exports = ConstantMap;

@@ -94,9 +94,13 @@ const ErrMap = {
     RequestParamError: new Err(403, 13004, "请求字段错误, 错误字段"),
     ApiNotSupport: new Err(403, 13005, "当前api尚未开放"),
 
+    FileUploadFail: new Err(500, 14000, "文件上传失败"),
+    FileNotExist: new Err(404, 14001, "文件不存在"),
+
+
     ServerInnerError: new Err(500, 100000, "服务器内部错误"),
     RouteNotExist: new Err(404, 100001, "路由查找失败"),
-    FileUploadFail: new Err(500, 100002, "文件上传失败"),
+
 }
 
 // check 不允许重复的错误码
