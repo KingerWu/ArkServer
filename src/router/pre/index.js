@@ -7,8 +7,5 @@ const log = require("../../log");
 router.use(require('./common'));
 router.use(require('./sign'));
 router.use(require('./token'));
-router.use(require('./page'));
-
-
 
 module.exports = router;

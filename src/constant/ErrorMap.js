@@ -97,6 +97,7 @@ const ErrMap = {
     FileUploadFail: new Err(500, 14000, "文件上传失败"),
     FileNotExist: new Err(404, 14001, "文件不存在"),
 
+    TodoListNotExist: new Err(404, 15000, "todolist 不存在"),
 
     ServerInnerError: new Err(500, 100000, "服务器内部错误"),
     RouteNotExist: new Err(404, 100001, "路由查找失败"),

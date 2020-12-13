@@ -222,13 +222,6 @@ router.post("/emails", [
     body('email').isEmail(),
     body('type').isInt({min: 1, max: 4}),
 ], utils.asyncWrapper(async function (req, res) {
-    const checkParamResult = validationResult(req);
-    if (!checkParamResult.isEmpty()) {
-        constant.ErrorMap.RequestParamLost.to(res, {
-            errors: checkParamResult.array()
-        });
-        return;
-    }
     // 检查验证码类型
     let type = req.body.type;
     let email = req.body.email;
@@ -338,15 +331,6 @@ router.post("/users", [
     body('version_code').isInt({min: 1}),
     body('version_name').notEmpty(),
 ], utils.asyncWrapper(async function (req, res) {
-    const checkParamResult = validationResult(req);
-    if (!checkParamResult.isEmpty()) {
-        constant.ErrorMap.RequestParamLost.to(res, {
-            errors: checkParamResult.array()
-        });
-        return;
-    }
-
-    
     let email = req.body.email;
     let code = req.body.code;
     let pass = req.body.pass;
@@ -446,14 +430,6 @@ router.post("/sessions", [
     body('version_code').isInt({min: 1}),
     body('version_name').notEmpty(),
 ], utils.asyncWrapper(async function (req, res) {
-    const checkParamResult = validationResult(req);
-    if (!checkParamResult.isEmpty()) {
-        constant.ErrorMap.RequestParamLost.to(res, {
-            errors: checkParamResult.array()
-        });
-        return;
-    }
-
     let email = req.body.email; 
     let pass = req.body.pass;
 
@@ -590,14 +566,6 @@ router.put("/users", [
     // 1 修改昵称, 2 修改邮箱, 3 修改密码
     body('type').isInt({min: 1, max: 3}),
 ], utils.asyncWrapper(async function (req, res) {
-    let checkParamResult = validationResult(req);
-    if (!checkParamResult.isEmpty()) {
-        constant.ErrorMap.RequestParamLost.to(res, {
-            errors: checkParamResult.array()
-        });
-        return;
-    }
-
     // 获取用户的账号信息
     let type = req.body.type;
 
@@ -664,14 +632,6 @@ router.delete("/users", [
     body('code').notEmpty(),
     body('pass').notEmpty(),
 ], utils.asyncWrapper(async function (req, res) {
-    // 删除用户
-    let checkParamResult = validationResult(req);
-    if (!checkParamResult.isEmpty()) {
-        constant.ErrorMap.RequestParamLost.to(res, {
-            errors: checkParamResult.array()
-        });
-        return;
-    }
     let pass = req.body.pass;
     let code = req.body.code;
 
