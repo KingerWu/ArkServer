@@ -98,10 +98,12 @@ const ErrMap = {
     FileNotExist: new Err(404, 14001, "文件不存在"),
 
     TodoListNotExist: new Err(404, 15000, "todolist 不存在"),
+    WorthNotSet: new Err(404, 15000, "尚未设置价值观"),
+
+
 
     ServerInnerError: new Err(500, 100000, "服务器内部错误"),
     RouteNotExist: new Err(404, 100001, "路由查找失败"),
-
 }
 
 // check 不允许重复的错误码

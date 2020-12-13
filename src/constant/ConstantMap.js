@@ -48,6 +48,11 @@ const ConstantMap = {
     TodoStatusReady: 1,
     TodoStatusFinish: 2,
     TodoStatusUnFinish: 3,
+
+
+    // 类目 （工作观 = 1， 人生观 = 2）
+    WorthTypeWork: 1,
+    WorthTypeLife: 2,
 }
 
 module.exports = ConstantMap;
